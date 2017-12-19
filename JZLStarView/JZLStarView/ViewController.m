@@ -13,6 +13,7 @@
 @interface ViewController ()
 @property (nonatomic, strong) JZLStarView *starView;
 @property (nonatomic, strong) JZLStarView *starView2;
+@property (nonatomic, strong) JZLStarView *starView3;
 @end
 
 @implementation ViewController
@@ -21,6 +22,7 @@
     [super viewDidLoad];
     [self.view addSubview:self.starView];
     [self.view addSubview:self.starView2];
+    [self.view addSubview:self.starView3];
 
 }
 
@@ -37,6 +39,14 @@
         _starView2.currentScore = 3.2;
     }
     return _starView2;
+}
+
+- (JZLStarView *)starView3 {
+    if (!_starView3) {
+        _starView3 = [[JZLStarView alloc] initWithFrame:CGRectMake(50, 400, 200, 50) starCount:6 starStyle:IncompleteStar isAllowScroe:YES];
+        _starView3.currentScore = 3.2;
+    }
+    return _starView3;
 }
 
 
